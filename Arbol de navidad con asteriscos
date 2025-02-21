@@ -1,0 +1,14 @@
+from colorama import Fore, Style
+
+def arbol_de_navidad(altura):
+    for i in range(1, altura + 1):
+        espacios = " " * (altura - i)
+        asteriscos = Fore.RED + "*" * (2 * i - 1) + Style.RESET_ALL
+        print(espacios + asteriscos)
+
+    tronco_espacios = " " * (altura - 1)
+    tronco = Fore.GREEN + "|" + Style.RESET_ALL
+    print(tronco_espacios + tronco)
+
+altura_arbol = int(input("Ingrese la altura del árbol de Navidad: "))
+arbol_de_navidad(altura_arbol)
