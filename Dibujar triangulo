@@ -1,0 +1,16 @@
+import turtle
+
+# Crear una pantalla
+screen = turtle.Screen()
+screen.bgcolor("white")
+
+# Crear una tortuga
+triangulo_turtle = turtle.Turtle()
+
+# Dibujar un triángulo
+for _ in range(3):
+    triangulo_turtle.forward(100)  # Longitud de cada lado
+    triangulo_turtle.left(120)  # Ángulo de giro para formar un triángulo equilátero
+
+# Mantener la ventana abierta
+turtle.done()
