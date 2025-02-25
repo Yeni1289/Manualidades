@@ -1,0 +1,44 @@
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+import numpy as np
+
+# Función para dibujar una flor en coordenadas (x, y, z)
+def draw_flower(ax, x, y, z, petal_color='pink', center_color='yellow'):
+    # Dibujar pétalos (cilindros)
+    num_petals = 10
+    theta = np.linspace(0, 2*np.pi, num_petals)
+    r = 0.2  # Radio de los pétalos
+    for i in range(num_petals):
+        petal_x = r * np.cos(theta[i]) + x
+        petal_y = r * np.sin(theta[i]) + y
+        petal_z = z + np.random.uniform(0.5, 1.0)
+        ax.plot([x, petal_x], [y, petal_y], [z, petal_z], color=petal_color, linewidth=2)
+
+    # Dibujar el centro de la flor (esfera)
+    ax.scatter(x, y, z, color=center_color, s=100)
+
+# Configurar la figura 3D
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+
+# Dibujar varias flores en posiciones aleatorias
+num_flowers = 5
+for _ in range(num_flowers):
+    x = np.random.uniform(-5, 5)
+    y = np.random.uniform(-5, 5)
+    z = np.random.uniform(0, 5)
+    draw_flower(ax, x, y, z)
+
+# Añadir una frase para el Día de las Madres
+ax.text2D(0.5, 0.95, "¡Feliz Día de las Madres!", transform=ax.transAxes,
+          fontsize=12, ha='center', color='purple')
+
+# Configurar límites de los ejes
+ax.set_xlim(-7, 7)
+ax.set_ylim(-7, 7)
+ax.set_zlim(0, 7)
+
+# Mostrar la figura
+plt.title('Ramo de Flores 3D')
+plt.show()
+
