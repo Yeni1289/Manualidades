@@ -1,0 +1,21 @@
+import turtle
+import random
+
+# Configuración de la pantalla
+screen = turtle.Screen()
+screen.bgcolor("black")
+
+# Configuración de la tortuga
+t = turtle.Turtle()
+t.speed(0)  # Velocidad máxima
+colors = ["red", "orange", "yellow", "green", "blue", "purple", "pink", "cyan"]
+
+# Dibujar un patrón geométrico
+for i in range(72):  # Cantidad de giros
+    t.pencolor(random.choice(colors))  # Color aleatorio
+    t.forward(i * 5)  # Aumenta el tamaño en cada paso
+    t.right(91)  # Ángulo de giro (casi 90° pero con un pequeño desajuste)
+    
+# Ocultar la tortuga y mostrar el resultado
+t.hideturtle()
+turtle.done()
