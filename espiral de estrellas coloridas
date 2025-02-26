@@ -1,0 +1,33 @@
+import turtle
+import random
+
+# Configuración de la pantalla
+screen = turtle.Screen()
+screen.bgcolor("black")
+
+# Configuración de la tortuga
+t = turtle.Turtle()
+t.speed(0)
+colors = ["red", "orange", "yellow", "green", "blue", "purple", "pink", "cyan"]
+
+# Función para dibujar una estrella
+def estrella(size, color):
+    t.color(color)
+    t.begin_fill()
+    for _ in range(5):
+        t.forward(size)
+        t.right(144)  # Ángulo para formar la estrella
+    t.end_fill()
+
+# Dibujar un espiral de estrellas
+for i in range(36):  # Número de estrellas
+    t.penup()
+    t.goto(0, 0)  # Centrar el dibujo
+    t.pendown()
+    t.pencolor(random.choice(colors))
+    estrella(i * 5, random.choice(colors))  # Tamaño creciente
+    t.right(10)  # Rotación
+
+# Ocultar la tortuga y mostrar el resultado
+t.hideturtle()
+turtle.done()
