@@ -1,0 +1,39 @@
+import turtle
+import random
+
+# Configuración de la pantalla
+screen = turtle.Screen()
+screen.bgcolor("black")
+
+# Configuración de la tortuga
+t = turtle.Turtle()
+t.speed(0)  # Velocidad máxima
+t.pensize(2)
+colors = ["red", "orange", "yellow", "green", "blue", "purple", "pink"]
+
+# Función para dibujar un pétalo colorido
+def petalo(color):
+    t.color(color)
+    t.circle(100, 60)
+    t.left(120)
+    t.circle(100, 60)
+    t.left(120)
+
+# Dibujo de la flor con múltiples pétalos de diferentes colores
+for i in range(36):  # Número de pétalos
+    t.pencolor(random.choice(colors))  # Selecciona un color al azar
+    petalo(t.pencolor())
+    t.right(10)  # Rotación para crear la flor
+
+# Agregar un centro brillante
+t.penup()
+t.goto(0, -20)
+t.pendown()
+t.color("yellow")
+t.begin_fill()
+t.circle(20)
+t.end_fill()
+
+# Ocultar la tortuga y mostrar el resultado
+t.hideturtle()
+turtle.done()
