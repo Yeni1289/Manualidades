@@ -1,0 +1,33 @@
+import turtle
+
+# Configuración inicial de la ventana
+window = turtle.Screen()
+window.setup(width=600, height=600)
+window.bgcolor("sky blue")
+
+# Creación del objeto turtle
+pen = turtle.Turtle()
+pen.speed(0)
+pen.color("dark orange")
+pen.fillcolor("yellow")
+
+# Dibujar el centro del girasol
+pen.begin_fill()
+pen.circle(20)
+pen.end_fill()
+
+# Dibujar los pétalos del girasol
+for _ in range(18):
+    pen.penup()
+    pen.goto(0, 20)
+    pen.pendown()
+    pen.left(20)
+    pen.begin_fill()
+    pen.circle(100, 60)
+    pen.left(120)
+    pen.circle(100, 60)
+    pen.end_fill()
+
+# Esconder el objeto turtle y finalizar
+pen.hideturtle()
+turtle.done()
