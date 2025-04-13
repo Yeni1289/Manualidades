@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramo de Flores</title>
+    <style>
+        /* Contenedor del ramo */
+        .ramo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 50px auto;
+        }
+
+        /* Flor individual */
+        .flor {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Pétalos de la flor */
+        .petalo {
+            position: absolute;
+            width: 50px;
+            height: 80px;
+            background-color: #FFD700; /* Amarillo */
+            border-radius: 50%;
+            top: 0;
+            left: 50%;
+            transform-origin: 50% 100%;
+        }
+
+        .petalo:nth-child(1) {
+            transform: rotate(0deg) translateX(-50%);
+        }
+        .petalo:nth-child(2) {
+            transform: rotate(45deg) translateX(-50%);
+        }
+        .petalo:nth-child(3) {
+            transform: rotate(90deg) translateX(-50%);
+        }
+        .petalo:nth-child(4) {
+            transform: rotate(135deg) translateX(-50%);
+        }
+        .petalo:nth-child(5) {
+            transform: rotate(180deg) translateX(-50%);
+        }
+        .petalo:nth-child(6) {
+            transform: rotate(225deg) translateX(-50%);
+        }
+        .petalo:nth-child(7) {
+            transform: rotate(270deg) translateX(-50%);
+        }
+        .petalo:nth-child(8) {
+            transform: rotate(315deg) translateX(-50%);
+        }
+
+        /* Centro de la flor */
+        .centro {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background-color: #FFA500; /* Naranja */
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        /* Tallo de la flor */
+        .tallo {
+            position: absolute;
+            width: 8px;
+            height: 120px;
+            background-color: #228B22; /* Verde */
+            left: 50%;
+            transform: translateX(-50%);
+            top: 100%;
+        }
+
+        /* Ramo de flores */
+        .ramo-de-flores {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 30px; /* Espacio entre flores */
+        }
+
+        /* Alineación de flores en el ramo */
+        .flor-con-tallo {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="ramo">
+        <div class="ramo-de-flores">
+            <!-- Flor 1 -->
+            <div class="flor-con-tallo">
+                <div class="flor">
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="centro"></div>
+                </div>
+                <div class="tallo"></div>
+            </div>
+
+            <!-- Flor 2 -->
+            <div class="flor-con-tallo">
+                <div class="flor">
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="centro"></div>
+                </div>
+                <div class="tallo"></div>
+            </div>
+
+            <!-- Flor 3 -->
+            <div class="flor-con-tallo">
+                <div class="flor">
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="centro"></div>
+                </div>
+                <div class="tallo"></div>
+            </div>
+
+            <!-- Flor 4 -->
+            <div class="flor-con-tallo">
+                <div class="flor">
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="centro"></div>
+                </div>
+                <div class="tallo"></div>
+            </div>
+
+            <!-- Flor 5 -->
+            <div class="flor-con-tallo">
+                <div class="flor">
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="petalo"></div>
+                    <div class="centro"></div>
+                </div>
+                <div class="tallo"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
